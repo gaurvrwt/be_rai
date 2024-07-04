@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS
 app.use(cors());
 
-// Connect to MongoDB
 connectDB();
 
 // Routes
