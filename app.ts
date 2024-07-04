@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-
+import cors from 'cors';
 import { connectDB } from './src/config';
 import { authRoutes } from './src/routes';
 
@@ -12,6 +12,9 @@ const app = express();
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Enable CORS
+app.use(cors());
 
 // Connect to MongoDB
 connectDB();
